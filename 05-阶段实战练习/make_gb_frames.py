@@ -33,7 +33,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
-OUT_DIR = r'E:\SW\05-阶段实战练习'
+OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 PREV_DIR = os.path.join(OUT_DIR, 'preview')
 os.makedirs(PREV_DIR, exist_ok=True)
 
