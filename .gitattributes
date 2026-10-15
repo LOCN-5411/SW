@@ -1,0 +1,23 @@
+# 行尾与二进制声明 —— 防止 git 对模型/图纸文件做行尾转换
+
+# 文本类：统一 LF
+*.md        text eol=lf
+*.py        text eol=lf
+*.gitignore text eol=lf
+
+# 模型与图纸：几何文件按文本存（LF），但要显式声明避免被 autocrlf 改写
+*.step      text eol=lf
+*.stp       text eol=lf
+*.dxf       text eol=lf
+*.stl       text eol=lf
+
+# 真二进制：禁止 diff 与行尾转换
+*.png       binary
+*.jpg       binary
+*.pdf       binary
+*.zip       binary
+
+# SolidWorks 源文件（用户以后会往里放）
+*.SLDPRT    binary
+*.SLDASM    binary
+*.SLDDRW    binary
