@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# SolidWorks 临时与锁定文件（等你开始建模后会用到）
+*.sldprt~
+*.sldasm~
+*.slddrw~
+~$*.SLDPRT
+~$*.SLDASM
+~$*.SLDDRW
+*.tmp
+
+# 导出中间文件
+*.log
