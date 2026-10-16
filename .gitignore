@@ -21,6 +21,14 @@ desktop.ini
 # 导出中间文件
 *.log
 
+# SolidWorks 运行时会往"当前目录"写日志，而它把路径拼错时会落到仓库根目录，
+# 生成类似 SOLIDWORKSswxJRNL.BAK 这种名字（少了一个反斜杠）。
+# 2026-10-16 实测出现过一个。它 100% 是程序产物，不是学习资料。
+swxJRNL.*
+*.swj
+*.BAK
+/SOLIDWORKSswxJRNL*
+
 # ── SolidWorks 安装目录（重要）────────────────────────────────────
 # SolidWorks 被装在了本工作区根目录 E:\SW\ 下：7.58 GB、19,927 个文件。
 # 这是程序安装文件，不是学习资料，绝不能进 git 仓库。
