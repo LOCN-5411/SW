@@ -27,6 +27,12 @@ desktop.ini
 /SOLIDWORKS/
 /eDrawings/
 
+# 兜底：任何以 SOLIDWORKS 开头的顶层程序目录都不进仓库。
+# 教训（2026-10-16）：补装 Toolbox 时顺手误装了 Composer Player / PDM / Manage Client，
+# 它们被装成 SOLIDWORKS 的同级目录（各占数百 MB），当时只排除了 /SOLIDWORKS/，
+# 结果一次 git add -A 把 9,057 个文件 / 约 1.9 GB 提交了进去。加这条兜底防复发。
+/SOLIDWORKS*/
+
 # 你的练习模型默认不忽略 —— 想备份就正常 git add；
 # 如果不想让它们进仓库，取消下面几行注释即可。
 # *.SLDPRT
